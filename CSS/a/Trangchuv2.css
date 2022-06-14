@@ -1,0 +1,190 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+.header{
+    /*header flow*/
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 54px;
+    display: flex;
+    background-image: linear-gradient(#21a1e0, #1b86bb);
+    font-size: 24px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.header a{
+    text-decoration: none;
+}
+#hovericon{
+    color: rgba(255, 255, 255, 0.9);
+    transition: 0.3s;
+    margin-left: auto;
+    padding: 10px;
+     font-size: 21px;
+}
+#hovericon:hover{
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+}
+/*add new style quan ly sinh vien la code jquery */
+.leftheader{
+    position: relative;
+    overflow: hidden;
+    width: 50px;
+    padding: 10px;
+    display: flex;
+    background-image: linear-gradient(to right,#21a1e0, #1b86bb);
+    border-right: 3.6px solid #1c94cf;
+    border-bottom: 3.6px solid #1a87bd;
+    transition: 0.4s ease-in-out;
+}
+.leftheader:hover{
+    background-color:#39abe4;
+}
+.leftheader .container{
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+}
+.leftheader .titlequanly{
+    position: absolute;
+    left: -210px;
+    top: 20px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    transition: text-shadow 0.3s;/*effect hover*/
+}
+.showLeftHeader{
+    width: 240px;
+}
+.showLeftHeader .titlequanly{
+    left: 10px;
+}
+.showLeftHeader .container{
+    left: 210px;
+}
+/*end*/
+/*class showNenu is toggle class for Navigation*/
+.Navigation{
+    z-index: 1;
+    opacity: 0.94;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 0px;
+    background-image: linear-gradient(to right,#21a1e0, #1b86bb);;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    margin-right: 10px;
+}
+.submenu{
+    position: absolute;
+    left: 10px;
+    top: 63px;
+}
+.listmenu{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: white;
+    border: 3px solid white;
+    border-radius: 12px ;
+    width: 190px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.listmenu:hover{
+    background-color:#1b86bb;
+    font-size: 15px;
+    border: 3px solid rgb(235, 235, 235);
+}
+.listmenu i{/*set destination between icon and content*/
+    margin-right: 18px ;
+}
+.showMenu{
+    border-right: 3.6px solid #1c94cf ;
+    width: 261.4px;/*265px=261.4px + 3.6px(của borderright)*/
+}
+/*change mainform when navigation is show*/
+.mainform{
+    position: relative;
+    height: 810px;
+    width: 100%;
+    transition: 0.4s ease-in;
+}
+.marginleftform{
+    margin-left: 280px;
+    width: 85%;
+}
+
+/*end*/
+.contentQuery{
+    /*border: 1px solid black;*/
+    display: block;
+    position: absolute;
+    top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background: #f3f7f9;
+    height: 95%;
+    animation-name: slow;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes slow{
+    from { opacity:0;top:0;}
+    to{opacity:1;top: 27px;}
+}
+/*Xử lý sự kiện sổ danh sách menu*/
+.sublistmenu .listmenu{
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 172px;
+    cursor: pointer;
+    font-size: 12px;
+    background-color: #2da3dc;
+}
+.sublistmenu{
+    display: none;
+}
+.changesublistmenu{
+    display:block;
+}
+/*chỉnh scrollbar*/
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #1b87bd;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  /*thay đổi dấu + thành - khi xổ sublist*/
+  .fa-minus{
+      display: none;
+  }
+  .changeplus{
+      display:none;
+  }
+  .changeminus{
+      display:inline-block;
+  }

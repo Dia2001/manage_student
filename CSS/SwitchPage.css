@@ -1,0 +1,13 @@
+.switchPage{
+    text-decoration: none;
+    outline: none;
+    padding: 9px;
+    margin: 2px;
+    color: white;
+    font-weight: 12px;
+    background-color: #00e34b;
+    border-radius: 6px;
+}
+.switchPage:hover{
+    background-color: #00ff55;
+}

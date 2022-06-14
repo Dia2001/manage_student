@@ -1,0 +1,152 @@
+body {
+    font-family: "lato", sans-serif;
+  }
+  
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40% !important;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .responsive-table li {
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .responsive-table .table-header {
+    background-color: #95A5A6;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .responsive-table .table-row {
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    animation-name: tablerow;
+    animation-duration:.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  @keyframes tablerow{
+    from{margin-left: 36px;opacity: 0;}
+    to{margin-left: 0px;opacity: 1;}
+  }
+  .responsive-table .table-row:hover{
+    background-color: #f3f3f3;
+    box-shadow: none;
+  }
+  .responsive-table .col-1 {
+    flex-basis: 30%;
+    padding: 25px 30px;
+    text-align: center;
+  }
+  .responsive-table .col-2 {
+    flex-basis: 70%;
+    padding: 25px 30px;
+    text-align: left;
+  }
+  /*Chỉnh nút delete*/
+  .responsive-table .col-detele{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+  }
+  /* .responsive-table .col-detele button {
+      width: 63px;
+      font-size: 21px;
+      padding: 15px 0;
+      color: white;
+      background-color:rgb(255, 63, 63);
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+  }
+  .responsive-table .col-detele button:hover{
+    background-color: rgb(255, 54,54);
+    box-shadow: none;
+    cursor: pointer;
+  } */
+  /*chỉnh button thành a*/
+  .responsive-table .col-detele a{
+    /*Điểm đáng thay đổi*/
+    position: absolute;
+    right: 3px;
+    top: 6px;
+    text-decoration: none;
+    width: 63px;
+    font-size: 21px;
+    padding: 15px 0;
+    color: white;
+    background-color:rgb(255, 63, 63);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.responsive-table .col-detele a:hover{
+  background-color: rgb(255, 54,54);
+  box-shadow: none;
+  cursor: pointer;
+}
+  /*CHỉnh nút add va sua*/
+  .responsive-table .col-submit button{
+    display: none;
+  }
+  .responsive-table .col-submit .Repair{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    background-color:rgb(63, 255, 63);
+    border: none;
+    border-radius: 6px;
+    color: rgb(245, 245, 245);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.responsive-table .col-submit .Repair:hover{
+  background-color:rgb(45, 245, 45);
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: white;
+}
+.responsive-table .col-submit .Add{
+  position: absolute;
+  right: 81px;
+  top:5px;
+  background-color:rgb(99, 99, 253);
+  border: none;
+  border-radius: 6px;
+  color: rgb(245, 245, 245);
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.responsive-table .col-submit .Add:hover{
+  background-color:rgb(81, 81, 253);
+  box-shadow: none;
+  cursor: pointer;
+  color: white;
+
+}
+.responsive-table .col-submit button {
+  width: 63px;
+  font-size: 21px;
+  padding: 15px 0;
+}
+/*chỉnh css input*/
+.responsive-table .in{/*Khử padding*/
+    padding: 6px;
+}
+.responsive-table .in input{
+    width: 72px;
+    padding: 18px 31px;
+    border: 3px solid #f3f3f3;
+    border-radius: 6px;
+}
+/*events in input*/
+.responsive-table .in input:focus{
+  border-radius:6px ;
+  border: 3px solid rgb(180, 180, 180);
+  outline: none;
+}

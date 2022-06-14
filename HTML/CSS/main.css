@@ -1,0 +1,29 @@
+.card-header {
+    font-size: 30px;
+    text-align: center;
+}
+
+.bg-success {
+    color: #fff;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.list-group-item.active a {
+    color: #fff
+}
+
+.list-page-number {
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-submit {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
